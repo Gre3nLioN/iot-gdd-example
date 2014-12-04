@@ -55,7 +55,9 @@ Setup
 
 * Si no tenes las librerias, podes agregarlas desde la carpeta /arduino/libraries de este repositorio.
 
-* Para esta version, el dispositivo tiene que estar conectado en la misma red que el server. Para esto, tenes que configurar 2 valores: IP del servidor y DeviceId que luego usaras en el servidor.
+* Para esta version, el dispositivo tiene que estar conectado en la misma red que el server. Para esto, tenes que configurar 2 valores que luego usaras en el servidor: 
+* serverIp 
+* deviceId
 
 
 ### Node.Js
@@ -79,25 +81,35 @@ $  node app.js
 * Abri tu navegador en 'http://localhost:3000' y navega los distintos ejemplos.
 
 
-### Como funciona?
+# Como funciona?
 
 ### Sensores a Server
 
-# Arduino utiliza 2 endpoints para comunicar informacion
+#### Arduino utiliza 2 endpoints para comunicar informacion
+
+### Server a FrontEnd
+
+#### NodeJs utiliza 2 mensajes de web sockets para informar a la visualizacion que tiene que actualizar.
 
 
 ###
 
+Que queda por hacer?
+=======
+
+* Construir persistencia con Mongo.DB
+* Utlizar una api de prediccion de clima
+* Armar formulas para distintos tipos de plantas
+* Agregar las formulas de calor
+* Agregar un server central en Heroku? Google Cloud Platform? para compartir todas las estadisticas
+
+Ayudanos a armarlo!
 
 
-Este codigo esta basado en los siguientes repositorios.
-
-https://github.com/IotBue/nestRemix
-https://github.com/lucasrudi/data-journalism
-https://github.com/tinchoforever/sensor-journalism-kit-hhba
 
 Authors
 =======
+* [Iván Fardjoume] de [Patagonia Tec]
 * [Martín Rabaglia] de [R/GA] / [Hackthon Makers]
 * [Ivan Roumec] de [R/GA]
 * [Belen Curcio]
@@ -106,12 +118,15 @@ Authors
 * [Federico Gonzalez]
 * [Sergio Serrano]
 
+Este codigo esta basado en los siguientes repositorios.
+
+* https://github.com/IotBue/nestRemix
+* https://github.com/lucasrudi/data-journalism
+* https://github.com/tinchoforever/sensor-journalism-kit-hhba
 
 License
 =======
-
 Free to use and specially free to teach!
-
 **Enjoy, learn and collaborate!**
 
 [AngularJS]: http://angularjs.org
