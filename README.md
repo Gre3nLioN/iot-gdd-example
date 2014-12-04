@@ -5,7 +5,11 @@ Internet of Things Workshop - Google Developer Day - Buenos Aires 2014.
 
 Rega.me es un ejemplo que demuestra como debe ser la arquitectura de proyectos para Internet Of Things.
 
-La idea es crear un sistema que pueda genere que una planta de interior o exterior transforme su ambiente a un estado optimo segun sus necesidades.
+Vamos a combinar Arduino + NodeJs + Angular.Js para tener un sistema base para hacer sistemas que mezclen informacion del mundo real, la guarden y procesen y finalmente las muestre en un frontend.
+
+En este caso, la idea es crear un sistema que pueda genere que una planta de interior o exterior transforme su ambiente a un estado optimo segun sus necesidades.
+
+Al final del workshop vas a tener en tu maquina el ejemplo y el software andando para que puedas seguir en tu casa si obtenes los materiales de electronica necesarios.
 
 <img src="https://raw.githubusercontent.com/Gre3nLioN/iot-gdd/master/server/public/images/front.jpg">
 
