@@ -1,7 +1,8 @@
 =================
 Rega.me 
 =================
-Internet of Things Workshop - Google Developer Day - Buenos Aires 2014.
+####Internet of Things Workshop - Google Developer Dev Fest - Buenos Aires 6 Diciembre 2014.
+(La version con la presentacion y otros chiches se encuentra en https://github.com/Gre3nLioN/iot-gdd)
 
 Rega.me es un ejemplo que demuestra como debe ser la arquitectura de proyectos para Internet Of Things.
 
