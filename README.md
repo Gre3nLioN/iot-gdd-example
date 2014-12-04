@@ -7,7 +7,7 @@ Rega.me es un ejemplo que demuestra como debe ser la arquitectura de proyectos p
 
 La idea es crear un sistema que pueda genere que una planta de interior o exterior transforme su ambiente a un estado optimo segun sus necesidades.
 
-
+<img src="https://raw.githubusercontent.com/Gre3nLioN/iot-gdd/master/server/public/images/front.jpg">
 
 
 ### Version
@@ -113,3 +113,13 @@ License
 Free to use and specially free to teach!
 
 **Enjoy, learn and collaborate!**
+
+[AngularJS]: http://angularjs.org
+[R/GA]: http://www.rga.com
+[Iván Fardjoume]: http://patagoniatecnology.com 
+[Patagonia Tec]: http://patagoniatecnology.com
+[Martín Rabaglia]: http://twitter.com/sr_humo
+[IoTBue]: http://www.meetup.com/IoT-Buenos-Aires/
+[Node.js]: http://nodejs.org
+[Express]: http://expressjs.com
+[Arduino]: http://arduino.cc
