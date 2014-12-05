@@ -3704,3 +3704,34 @@ div.error {
 .stats-detail .progress-bar #temperature{
 	background-color: #228e05;
 }
+
+.small.bottom{
+	background-color: #92c46d;
+}
+
+.small.bottom .row-note{
+	color: #fff;
+	border-radius: 5px;
+	margin: 0 40px;
+	padding: 15px;
+	background-color: #649a3c;
+}
+
+.small.bottom .row-note .row-note h1{
+	font-size: 2em;
+}
+
+.small.bottom .row-note .row-content{
+
+}
+
+i.lamp{
+
+	position: absolute;
+	top: 50%; left: 50%;
+	width: 54px;
+	height: 54px;
+	background-image: url(../images/lamp.png);
+    background-repeat: no-repeat;
+    margin: 5px 0 0;
+}
