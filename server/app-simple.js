@@ -62,8 +62,9 @@ router.post('/api/v1/plant/stats/:id', function(req,res){
           soilTemperature: parseFloat(req.body.soilTemperature)
       };
 
-      res.json(req.body);
+      res.json('OK');
    
 
 });
 
+app.use(router);

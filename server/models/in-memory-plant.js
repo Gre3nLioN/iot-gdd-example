@@ -30,6 +30,7 @@ module.exports = {
 			//Take last prediction.
 			var last = plant.history[0];
 			console.log(last.soilHumidity);
+			console.log(last.envTemperature);
 			//TODO: How about an array of formulas?
 			//First Formula:: 
 			//If Soil humidity <45% : Start Irrigation until returning to normal.
