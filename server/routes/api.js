@@ -1,4 +1,3 @@
-
 var express = require('express');
 var plantsDB = require('../models/in-memory-plant.js');
 var router = express.Router();
@@ -6,19 +5,8 @@ var router = express.Router();
 
 module.exports = {
 
-	getStatus: function(req, res,io) {
-  		console.log('getStatus',req.body );
-
-      //if (p){
-        res.json('/' + "COLD");
-      /*}
-      else{
-        res.json('/' + "");
-      }*/
-
-      //return what arduino have to do
-
-      /*
+  getStatus: function(req, res,io) {
+      console.log('getStatus',req.body );      
       plantsDB.get(req.params.id, function(data){
 
         res.json({plant: data, success:true});
@@ -26,14 +14,29 @@ module.exports = {
         res.status(500);
         res.json({error:e, success:false});
       });
-  		*/
-	},
+      
+  },
   predict: function(req, res,io) {
       console.log('predict',req.params.id );
       
       plantsDB.predict(req.params.id, function(data){
         io.sockets.in(req.params.id).emit('predict',data);
-        res.json({plant: data, success:true});
+        var response = '/';
+        console.log(data);
+        if (data.light ==="ON"){
+          response +='WARM';
+        }
+        else if (data.ventilator === "ON"){
+          response +='COLD';
+        }
+        else if (data.irrigation === "ON"){
+          response +='WATER';
+        }
+        else {
+          response += 'OFF';
+        }
+      //return what arduino have to do
+        res.json(response);
       },function(e){
         res.status(500);
         res.json({error:e, success:false});
@@ -41,33 +44,31 @@ module.exports = {
       
   },
 
-	postStatus: function(req,res,io) {
-  		//{"temp":"31.00","soilHumidity":"868.00","humidity":"34.00"}
-  		console.log('postStatus',req.body );
+  postStatus: function(req,res,io) {
 
-  		var stats = {
-          envTemperature: parseFloat(req.body.envTemperature),
-          envHumidity: parseFloat(req.body.envHumidity),
-          soilTemperature: parseFloat(req.body.soilTemperature)
-      };
+    console.log('postStatus',req.body );
 
-      res.json('OK');
-      /*
-      plantsDB.save(req.params.id, stats, 
-        function(data){
+    var stats = {
+      envTemperature: parseFloat(req.body.envTemperature),
+      envHumidity: parseFloat(req.body.envHumidity),
+      soilHumidity: parseFloat(req.body.soilHumidity)
+    };
 
-          var statusMsg = data;
-        //Emit the message to any active dashboard
-        io.sockets.in(req.params.id).emit('stats',statusMsg);
-        //return correct result
-        res.json({status:statusMsg, success:true});
-      },
-        function(e){
-          res.status(500);
-          res.json({error:e, success:false});
-      });
-      */
-  		
-	},
+
+
+   plantsDB.save(req.params.id, stats, 
+    function(data){
+
+      var statusMsg = data;
+      //Emit the message to any active dashboard
+      io.sockets.in(req.params.id).emit('stats',statusMsg);
+      //return correct result
+      res.json({status:statusMsg, success:true});
+    },
+    function(e){
+      res.status(500);
+      res.json({error:e, success:false});
+    });
+  },
 
 }

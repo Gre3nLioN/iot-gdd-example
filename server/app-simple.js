@@ -51,14 +51,10 @@ server.listen(app.get('port'), function(){
 
 
 
-var express = require('express');
-var plantsDB = require('../models/in-memory-plant.js');
 var router = express.Router();
 
-
-module.exports = {
-  postStatus: function(req,res,io) {
-      console.log('postStatus',req.body );
+router.post('/api/v1/plant/stats/:id', function(req,res){
+  console.log('postStatus',req.body );
 
       var stats = {
           envTemperature: parseFloat(req.body.envTemperature),
@@ -68,8 +64,6 @@ module.exports = {
 
       res.json(req.body);
    
-      
-  },
 
-}
+});
 
