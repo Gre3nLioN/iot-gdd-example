@@ -61,8 +61,10 @@ Setup
 * Si no tenes las librerias, podes agregarlas desde la carpeta /arduino/libraries de este repositorio.
 
 * Para esta version, el dispositivo tiene que estar conectado en la misma red que el server. Para esto, tenes que configurar 2 valores que luego usaras en el servidor: 
-* serverIp 
-* deviceId
+```javascript
+String server = "192.168.1.77";
+String DeviceID = "roberta";
+```
 
 ### Estructura de carpetas
 
