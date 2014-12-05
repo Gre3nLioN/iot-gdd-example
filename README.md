@@ -124,7 +124,7 @@ Ayudanos a armarlo!
 Authors
 =======
 * [Iván Fardjoume] de [Patagonia Tec]
-* [Martín Rabaglia] de [R/GA] / [Hackthon Makers]
+* [Martín Rabaglia] de [R/GA] / [Hackathon Makers]
 * [Ivan Roumec] de [R/GA]
 * [Belen Curcio] de [R/GA]
 * [Lourdes Montano] de [R/GA]
@@ -150,6 +150,7 @@ Free to use and specially free to teach!
 [Iván Fardjoume]: http://patagoniatecnology.com 
 [Patagonia Tec]: http://patagoniatecnology.com
 [Martín Rabaglia]: http://martinrabaglia.com.ar
+[Hackathon Makers]: http://hackathonmakers.org
 [Ivan Roumec]: http://twitter.com/gre3nlion
 [Belen Curcio]: http://twitter.com/okbel
 [Lourdes Montano]: http://twitter.com/loumontano
