@@ -5,13 +5,13 @@
 //Sensors
 #define DHTPIN 2      //Dht11 in pin 2
 #define DHTTYPE DHT11
-#define ground 1 // humidity ground in pin A1
+#define ground 0 // humidity ground in pin A0
 
 DHT dht(DHTPIN, DHTTYPE);
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 unsigned int port = 3000;
-String server = "192.168.1.100";  //here IP to connect with
+String server = "192.168.1.100";  //Here change ip to server ip
 String postPath = "/api/v1/plant/stats/";
 String getPath = "/api/v1/plant/predict/";
 float time=0.0f;

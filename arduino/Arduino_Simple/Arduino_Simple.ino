@@ -5,7 +5,7 @@
 //Sensors
 #define DHTPIN 2      //Dht11 in pin 2
 #define DHTTYPE DHT11
-#define ground 1 // humidity ground in pin A1
+#define ground 0 // humidity ground in pin A0
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -17,7 +17,7 @@ float time=0.0f;
 #define TIMER_DELAY 1.0f
 float timer=TIMER_DELAY;
 
-IPAddress ip(192,168,0,177);
+IPAddress ip(192,168,0,177);    //Here change ip to server ip
 
 EthernetClient client;
 

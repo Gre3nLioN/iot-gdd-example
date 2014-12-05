@@ -4,7 +4,7 @@
 //Sensors
 #define DHTPIN 2      //Dht11 in pin 2
 #define DHTTYPE DHT11
-#define ground 1 // humidity ground in pin A1
+#define ground 0 // humidity ground in pin A0
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -34,28 +34,22 @@ void setup() {
 
 void loop()
 {
- float t = millis()/1000.0f;
-  float dt = t - time;
-  time = t; 
-  // if there are incoming bytes available 
-  // from the server, read them and print them: 
-  if(timer>0.0f){
-    timer-=dt;
-    if(timer<=0.0f){
-      if(posting){
-        leerSensores();
-    }
-  }
+  delay(1000); 
+  leerSensores();
 }
 
 void leerSensores() {
 
   T2 = dht.readTemperature();
   H = dht.readHumidity();
-  Serial.println(T2);   
+  Serial.println("Temperatura: ");
+  Serial.println(T2); 
+  Serial.println("Humedad: ");  
   Serial.println(H);
   
-  soilHumidity = analogRead(ground);  
+  soilHumidity = 100 - analogRead(ground) /10; 
+  Serial.println("Humedad de la tierra:"); 
   Serial.println(soilHumidity);  
+  Serial.println("-------------------");
 }
 
