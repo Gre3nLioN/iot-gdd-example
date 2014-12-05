@@ -3,7 +3,6 @@ Rega.me
 =================
 ##### Internet of Things Workshop - Google Developer Dev Fest - 
 ##### Buenos Aires 6 Diciembre 2014.
-(La version con la presentacion y otros chiches se encuentra en https://github.com/Gre3nLioN/iot-gdd)
 
 Rega.me es un ejemplo que demuestra como debe ser la arquitectura de proyectos para Internet Of Things.
 
@@ -37,7 +36,7 @@ Requerimientos
 Antes de empezar, asegurate tener los siguientes programas instalados.
 Es importante que lo hagas para poder hacer el workshop lo mejor posible
 * [Node.js]
-* [Arduino]
+* [Arduino] - Version 1.6 llamada Arduino 2
 
 
 Otro software que utilizamos se instalara ejecutando
@@ -62,11 +61,23 @@ Setup
 * Si no tenes las librerias, podes agregarlas desde la carpeta /arduino/libraries de este repositorio.
 
 * Para esta version, el dispositivo tiene que estar conectado en la misma red que el server. Para esto, tenes que configurar 2 valores que luego usaras en el servidor: 
-* serverIp 
-* deviceId
+```javascript
+String server = "192.168.1.77";
+String DeviceID = "roberta";
+```
+
+### Estructura de carpetas
+
+* /arduino - Contiene todos los archivos de ejemplo de arduino
+
+* /server - Contiene todos los archivos del servidor y el frontend.
 
 
-### Node.Js
+### Arduino - /arduino
+
+
+
+### Node.Js - /server
 
 ### Como empezar?
 
@@ -90,12 +101,11 @@ $  node app.js
 # Como funciona?
 
 ### Sensores a Server
-
-#### Arduino utiliza 2 endpoints para comunicar informacion
+* Arduino utiliza 2 endpoints para comunicar informacion
 
 ### Server a FrontEnd
 
-#### NodeJs utiliza 2 mensajes de web sockets para informar a la visualizacion que tiene que actualizar.
+* NodeJs utiliza 2 mensajes de web sockets para informar a la visualizacion que tiene que actualizar.
 
 
 ###
@@ -116,13 +126,13 @@ Ayudanos a armarlo!
 Authors
 =======
 * [Iván Fardjoume] de [Patagonia Tec]
-* [Martín Rabaglia] de [R/GA] / [Hackthon Makers]
+* [Martín Rabaglia] de [R/GA] / [Hackathon Makers]
 * [Ivan Roumec] de [R/GA]
-* [Belen Curcio]
-* [Lourdes Montano]
-* [Santiago Marin]
-* [Federico Gonzalez]
-* [Sergio Serrano]
+* [Belen Curcio] de [R/GA]
+* [Lourdes Montano] de [R/GA]
+* [Santiago Marin] de [R/GA]
+* [Federico Gonzalez] de [R/GA]
+* [Sergio Serrano] de [R/GA]
 
 Este codigo esta basado en los siguientes repositorios.
 
@@ -135,12 +145,20 @@ License
 Free to use and specially free to teach!
 **Enjoy, learn and collaborate!**
 
-[AngularJS]: http://angularjs.org
+[Angular.Js]: http://angularjs.org
+[D3]: http://d3js.org/
+[Socket.io]: http://socket.io/
 [R/GA]: http://www.rga.com
 [Iván Fardjoume]: http://patagoniatecnology.com 
 [Patagonia Tec]: http://patagoniatecnology.com
-[Martín Rabaglia]: http://twitter.com/sr_humo
-[IoTBue]: http://www.meetup.com/IoT-Buenos-Aires/
+[Martín Rabaglia]: http://martinrabaglia.com.ar
+[Hackathon Makers]: http://hackathonmakers.org
+[Ivan Roumec]: http://twitter.com/gre3nlion
+[Belen Curcio]: http://twitter.com/okbel
+[Lourdes Montano]: http://twitter.com/loumontano
+[Santiago Marin]: http://twitter.com/loumontano
+[Sergio Serrano]: http://twitter.com/loumontano
+[Federico Gonzalez]: http://twitter.com/loumontano
 [Node.js]: http://nodejs.org
 [Express]: http://expressjs.com
 [Arduino]: http://arduino.cc
