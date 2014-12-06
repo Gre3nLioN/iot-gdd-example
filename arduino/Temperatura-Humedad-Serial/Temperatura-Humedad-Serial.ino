@@ -48,6 +48,9 @@ void leerSensores() {
   Serial.println(H);
   
   soilHumidity = 100 - analogRead(ground) /10; 
+  if(soilHumidity < 0 ){
+     soilHumidity = 0;
+  }
   Serial.println("Humedad de la tierra:"); 
   Serial.println(soilHumidity);  
   Serial.println("-------------------");

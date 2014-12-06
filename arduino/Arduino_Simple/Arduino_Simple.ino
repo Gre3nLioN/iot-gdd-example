@@ -127,7 +127,9 @@ void leerSensores() {
   T2 = dht.readTemperature();
   H = dht.readHumidity();
   soilHumidity = 100 - analogRead(ground) / 10;
-  
+  if(soilHumidity < 0 ){
+     soilHumidity = 0;
+  }
   Serial.println(T2);   
   Serial.println(H);
   Serial.println(soilHumidity);  
