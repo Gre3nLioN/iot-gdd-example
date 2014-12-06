@@ -1,8 +1,7 @@
 <div>
 	<div class="dashboard">
-            <div class="small g-wide--1 g-medium--half">
-                
-                
+            <div class="small g-wide--1 g-medium--half left">
+
             </div> 
             
             <div class="g-wide--3 g-wide--last g-medium--half g--last">
@@ -15,23 +14,32 @@
 		        	<h2> Hola,<strong> Roberta </strong> esta bien </h2>
 		        	<div class="stats-detail">
 		        		<div class="stat-header">
-		        			<h3>Humedad</h3><em>{{stats.soilHumidity}}%</em>
+		        			<h3>Humedad Ambiente</h3><em>{{stats.envHumidity}}%</em>
 		        		</div>
-		        		<div class="progress-bar"><div class="progress" id="humidity" style="width:{{stats.soilHumidity}}%"></div></div>
+		        		<div class="progress-bar"><div class="progress" id="envHumidity" data-value="{{stats.envHumidity}}" style="width:{{stats.envHumidity}}%"></div></div>
 		        	</div>
 		        	<div class="stats-detail">
 		        		<div class="stat-header">
-		        			<h3>Temperatura</h3><em>{{stats.soilTemperature}} C</em>
+		        			<h3>Temperatura Ambiente</h3><em>{{stats.envTemperature}} C</em>
 		        		</div>
-		        		<div class="progress-bar"><div class="progress" id="temperature" style="width:{{stats.soilTemperature}}%"></div></div>
+		        		<div class="progress-bar"><div class="progress" id="envTemperature" data-value="{{stats.envTemperature}}" style="width:{{stats.envTemperature}}%"></div></div>
 		        	</div>
+
+		        	<div class="stats-detail">
+		        		<div class="stat-header">
+		        			<h3>Temperatura Tierra</h3><em>{{stats.soilHumidity}} C</em>
+		        		</div>
+		        		<div class="progress-bar"><div class="progress" id="soilHumidity" data-value="{{stats.soilHumidity}}" style="width:{{stats.soilHumidity}}%"></div></div>
+		        	</div>
+
 		        	<div class="stats-detail">
 		        		<h3>Ventilador - <span class="ventilator">{{status.ventilator}}</span></h3>
-
-
 		        	</div>
 		        	<div class="stats-detail">
-		        		<h3>Riego -  <span class="ventilator">{{status.irrigation}}</span></h3>
+		        		<h3>Riego - <span class="irrigation">{{status.irrigation}}</span></h3>
+		        	</div>
+		        	<div class="stats-detail">
+		        		<h3>Luz - <span class="light">{{status.light}}</span></h3>
 		        	</div>
 		        </div>
                 <div class="small bottom">

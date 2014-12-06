@@ -3249,7 +3249,6 @@ body.open,.app-bar {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 2em;
     line-height: 60px;
     margin: 0 16px;
     padding: 0;
@@ -3420,7 +3419,6 @@ main {
         margin: 0;
         padding: 0;
         line-height: 130px;
-        font-size: 46px;
     }
 
     .app-bar-actions {
@@ -3506,10 +3504,8 @@ main {
 }
 
 body {
-    padding: 4px;
-    font-family: helvetica !important;
-    font-weight: bold;
-    line-height: 1.5em;
+    font-family: Helvetica !important;
+    background: #f4f3ee;
 }
 
 header {
@@ -3678,7 +3674,7 @@ div.error {
 
 .stats-detail .progress-bar .progress{
 	overflow: hidden;
-	background-color: #8e0606;
+	background-color: #eef2f1;
 	height: 100%;
 }
 
@@ -3697,12 +3693,15 @@ div.error {
 	padding: 5px 0;
 }
 
-.stats-detail .progress-bar #humidity{
-	background-color: #8e0606;
+.stats-detail .progress-bar #envHumidity{
+	background-color: #3A9AC0;
 }
 
-.stats-detail .progress-bar #temperature{
-	background-color: #228e05;
+.stats-detail .progress-bar #envTemperature{
+	background-color: #fd835c;
+}
+.stats-detail .progress-bar #soilHumidity{
+    background-color: #ffdb60   ;
 }
 
 .small.bottom{
@@ -3716,22 +3715,46 @@ div.error {
 	padding: 15px;
 	background-color: #649a3c;
 }
+.small.bottom .row-note .row-lamp, .small.bottom .row-note .row-content{
+    position: relative;
+    display: inline-block;
+}
 
-.small.bottom .row-note .row-note h1{
-	font-size: 2em;
+.small.bottom .row-note .row-lamp{
+    width: 94px;
 }
 
 .small.bottom .row-note .row-content{
+    width: 87%;
+}
 
+.small.bottom .row-note .row-content h1{
+	font-size: 1.4em;
+    font-weight: bold;
+}
+
+.small.bottom .row-note .row-content p{
+    font-size: 1em;
+    padding: 15px 0;
 }
 
 i.lamp{
-
-	position: absolute;
-	top: 50%; left: 50%;
+    display: block;
 	width: 54px;
 	height: 54px;
 	background-image: url(../images/lamp.png);
     background-repeat: no-repeat;
-    margin: 5px 0 0;
+    margin: 0 20px 0 15px;
+}
+
+h1.logo{
+    font-size: 3.5em;
+}
+
+.stats h2{
+    font-size: 2em;
+}
+
+.left{
+    background: #f4f3ee;
 }
