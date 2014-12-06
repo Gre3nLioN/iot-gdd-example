@@ -12,7 +12,7 @@ En este caso, la idea es crear un sistema que pueda genere que una planta de int
 
 Al final del workshop vas a tener en tu maquina el ejemplo y el software andando para que puedas seguir en tu casa si obtenes los materiales de electronica necesarios.
 
-<img src="https://raw.githubusercontent.com/Gre3nLioN/iot-gdd/master/server/public/images/front.jpg">
+<img src="https://raw.githubusercontent.com/Gre3nLioN/iot-gdd-example/master/server/public/images/front.jpg">
 
 
 ### Version
