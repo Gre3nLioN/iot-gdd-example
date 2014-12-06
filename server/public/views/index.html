@@ -7,7 +7,7 @@
             <div class="g-wide--3 g-wide--last g-medium--half g--last">
                 <div class="main">
 		        	<h1 class="logo"> Rega<strong>.me </strong></h1>
-		        	<section class="app-bar-actions">
+		        	<section class="app-bar-actions"></section>
 		        	<!-- Put App Bar Buttons Here -->
 		        </div>
 				<div class="stats">
@@ -32,16 +32,37 @@
 		        		<div class="progress-bar"><div class="progress" id="soilHumidity" data-value="{{stats.soilHumidity}}" style="width:{{stats.soilHumidity}}%"></div></div>
 		        	</div>
 
-		        	<div class="stats-detail">
-		        		<h3>Ventilador - <span class="ventilator">{{status.ventilator}}</span></h3>
-		        	</div>
-		        	<div class="stats-detail">
-		        		<h3>Riego - <span class="irrigation">{{status.irrigation}}</span></h3>
-		        	</div>
-		        	<div class="stats-detail">
-		        		<h3>Luz - <span class="light">{{status.light}}</span></h3>
-		        	</div>
-		        </div>
+		        	<div class="three">
+			        	<div class="stats-detail-box">
+			        		<h3>Ventilador<span class="ventilator"></span></h3>
+			        		<div class="switch-box">
+				        		<div class="switch">
+				        			<div class="{{status.ventilator}}"></div>
+				        		</div>
+				        		<label>OFF - ON</label>
+				        	</div>
+			        	</div>
+			        	<div class="stats-detail-box">
+			        		<h3>Riego<span class="irrigation"></span></h3>
+			        		<div class="switch-box">
+				        		<div class="switch">
+				        			<div class="{{status.irrigation}}"></div>
+				        		</div>
+				        		<label>OFF - ON</label>
+				        	</div>
+			        	</div>
+			        	<div class="stats-detail-box">
+			        		<h3>Luz<span class="light"></span></h3>
+			        		<div class="switch-box">
+				        		<div class="switch">
+				        			<div class="{{status.light}}"></div>
+				        		</div>
+				        		<label>OFF - ON</label>
+				        	</div>
+			        	</div>
+			    	</div>
+
+
                 <div class="small bottom">
                 	<div class="row-note">
 	                	<div class="row-lamp">
@@ -51,7 +72,7 @@
 	                		<h1>Cuidados de la "<i>Impatiens walleriana</i>" </h1>
 	                		<p>
 		                		Regar siempre en la mañana o noche, sin mojar las flores
-								Propensas a arañas en días pocos húmedos (<30%)
+								Propensas a arañas en días pocos húmedos (menor a 30%)
 								fertilizar/rociar o  cortar hojas afectadas
 								No soporta el frío
 								Evitar exceso de agua

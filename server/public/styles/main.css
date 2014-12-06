@@ -3706,6 +3706,7 @@ div.error {
 
 .small.bottom{
 	background-color: #92c46d;
+    clear: both;
 }
 
 .small.bottom .row-note{
@@ -3757,4 +3758,48 @@ h1.logo{
 
 .left{
     background: #f4f3ee;
+}
+
+.switch{
+    position: relative;
+    display: block;
+    height: 35px;
+    width: 70px;
+    background: #fff;
+    border-radius: 30px;
+    left: 50%;
+    margin-left: -33px;
+}
+
+.switch .on, .switch .off {
+    background: #414a53;
+    border-radius: 50%;
+    height: 29px;
+    width: 29px;
+    position: absolute;
+    top: 3px;
+
+}
+
+.switch .off{
+    left: 4px;
+}
+.switch .on{
+    right: 4px;
+}
+
+.switch-box{
+    padding: 20px;
+}
+
+.stats-detail-box{
+    width: 33.33%;
+    display: inline;
+    float: left;
+    text-align: center;    
+}
+
+.three{
+    margin: 0 40px;
+    padding: 15px
 }
